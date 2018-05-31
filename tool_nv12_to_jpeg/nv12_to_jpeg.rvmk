@@ -1,0 +1,13 @@
+################################################################################
+#
+# nv12_to_jpeg
+#
+################################################################################
+
+# add dependencies
+NV12_TO_JPEG_DEPENDENCIES = libion mpp ffmpeg
+
+NV12_TO_JPEG_TARGET_FILES = \
+        $(NV12_TO_JPEG_BUILDDIR)nv12_to_jpeg
+
+$(eval $(rv-generic-cmake))

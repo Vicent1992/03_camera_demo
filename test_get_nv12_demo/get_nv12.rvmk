@@ -1,0 +1,13 @@
+################################################################################
+#
+# get_nv12
+#
+################################################################################
+
+# add dependencies
+GET_NV12_DEPENDENCIES = libion mpp ffmpeg
+
+GET_NV12_TARGET_FILES = \
+        $(GET_NV12_BUILDDIR)get_nv12
+
+$(eval $(rv-generic-cmake))

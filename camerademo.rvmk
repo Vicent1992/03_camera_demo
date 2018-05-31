@@ -1,0 +1,40 @@
+################################################################################
+#
+# camerademo
+#
+################################################################################
+LOCAL_PATH := $(pkgdir)
+
+CAMERADEMO_DEPENDENCIES  = isp_get_nv12 isp_get_h264 isp_get_jpeg isp_to_display \
+	nv12_to_jpeg nv12_to_h264 get_nv12
+
+$(eval $(rv-generic-cp))
+
+####################################
+#
+#    isp camera: capture display encoder
+#
+####################################
+include $(LOCAL_PATH)isp_get_nv12_demo/isp_get_nv12.rvmk
+include $(LOCAL_PATH)isp_get_jpeg_demo/isp_get_jpeg.rvmk
+include $(LOCAL_PATH)isp_get_h264_demo/isp_get_h264.rvmk
+include $(LOCAL_PATH)isp_to_display_demo/isp_to_display.rvmk
+
+####################################
+#
+#      tool format change 
+#
+####################################
+include $(LOCAL_PATH)tool_nv12_to_jpeg/nv12_to_jpeg.rvmk
+include $(LOCAL_PATH)tool_nv12_to_h264/nv12_to_h264.rvmk
+
+####################################
+#
+#  for test rkcamhal is no standard v4l2devices
+#
+####################################
+include $(LOCAL_PATH)test_get_nv12_demo/get_nv12.rvmk
+
+
+
+

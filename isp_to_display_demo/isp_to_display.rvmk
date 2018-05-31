@@ -1,0 +1,13 @@
+################################################################################
+#
+# isp_to_display
+#
+################################################################################
+
+# add dependencies
+ISP_TO_DISPALY_DEPENDENCIES = 
+
+ISP_TO_DISPALY_TARGET_FILES = \
+        $(ISP_TO_DISPALY_BUILDDIR)isp_to_display
+
+$(eval $(rv-generic-cmake))

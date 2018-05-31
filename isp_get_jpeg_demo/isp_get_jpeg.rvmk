@@ -1,0 +1,13 @@
+################################################################################
+#
+# isp_get_jpeg
+#
+################################################################################
+
+# add dependencies
+ISP_GET_JPEG_DEPENDENCIES = 
+
+ISP_GET_JPEG_TARGET_FILES = \
+        $(ISP_GET_JPEG_BUILDDIR)isp_get_jpeg
+
+$(eval $(rv-generic-cmake))
